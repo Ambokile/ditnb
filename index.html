@@ -1,0 +1,1243 @@
+<?php
+session_start();
+  //  if(!isset( $_GET['key'])){
+	//	   header('location:index.php');
+	//	}
+	
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320; user-scalable=no" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script> 
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+window.onload = function(){ 
+window.chatting = function chat(){
+	 
+		     var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		
+		 document.querySelector("#chat_c").innerHTML = xmlhttp.responseText;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/chat_script.php",true);
+xmlhttp.send();
+
+
+		 } 
+		 setTimeout(chat,5);
+
+      function userinfo(){
+	
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		
+		 document.querySelector("#user_content").innerHTML = xmlhttp.responseText;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/getinfo.php",true);
+xmlhttp.send();
+
+
+	}
+	setInterval(userinfo,1005);
+
+ function media(){
+	      var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		
+		 document.querySelector("#media_c").innerHTML = xmlhttp.responseText;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/media_script.php",true);
+xmlhttp.send();
+
+	 }
+       setTimeout(media,5);
+
+function admininfo(){
+	
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		    
+document.querySelector(".info").innerHTML = xmlhttp.responseText;
+		
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/info.php",true);
+xmlhttp.send();
+
+
+	}
+	setInterval(admininfo,1005);
+	
+	 
+	function getUser_1(){
+	    var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		
+		 document.querySelector("#from").value = xmlhttp.responseText;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/getUser.php",true);
+xmlhttp.send();
+
+	}
+	    setTimeout(getUser_1,5);
+	
+  function grap_gene_info(){
+	    var str = 'GEN';
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		 document.querySelector("#infogen").innerHTML = xmlhttp.responseText;
+	 }
+			 
+			                       };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/get_info.php?str="+str,true);
+xmlhttp.send();
+	  }
+  setTimeout(grap_gene_info,5);
+  
+  
+ function msg(){
+	
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		
+		 document.querySelector("#message").innerHTML = xmlhttp.responseText;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/get_msg.php",true);
+xmlhttp.send();
+
+
+	}
+	setInterval(msg,1005);
+
+
+
+function admininfo(){
+	
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		    
+document.querySelector(".info").innerHTML = xmlhttp.responseText;
+		
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/info.php",true);
+xmlhttp.send();
+
+
+	}
+	setInterval(admininfo,1005);
+	
+	
+}
+
+function msg(a){
+   
+	window.id_ = setInterval(function msg_cover(){
+
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		document.querySelector("#message").innerHTML = xmlhttp.responseText;
+		return true;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/get_msg.php?str="+a+"&id_fun="+1,true);
+xmlhttp.send();
+     
+	},10);
+
+window.id_1 = setTimeout(function msg_cover_2(){
+   document.querySelector("#to_id").value = a;
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		 var string_f = xmlhttp.responseText;
+		document.querySelector("#to_id").value = string_f.substr(0,11);
+		return true;
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/get_msg.php?str="+a+"&id_fun="+2,true);
+xmlhttp.send();
+
+
+	},5);
+
+}
+function disable_this(){
+		       clearInterval(id_);
+			   clearTimeout(id_1);
+		 }
+function getUser(){
+	    var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		
+		 document.querySelector("#user").innerHTML = xmlhttp.responseText;
+		  document.querySelector("#user_media").innerHTML = xmlhttp.responseText;
+		   document.querySelector("#user_chat_room").innerHTML = xmlhttp.responseText;
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/getUser.php",true);
+xmlhttp.send();
+
+	}
+	    setTimeout(getUser,5);
+	   	
+
+/*function validate_log_in(){
+	
+	var element_1 = document.querySelector("#password").value;
+    var element_2 = document.querySelector("#username").value;
+	  var element_3 = document.querySelector("#log_err");
+	  
+	    if(element_2 == "" || element_2 == null){element_3.innerHTML ="* user name field is empty";}
+		  else if(element_1 == "" || element_1 == null){element_3.innerHTML ="* password field is empty";}
+		  else{return true;}
+	   return false;
+}*/
+
+
+
+
+ function send_sms(){ 
+ var element = document.querySelector("#msg_id").value;
+ var element_ = document.querySelector("#to_id").value;
+  
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		 alert(xmlhttp.responseText);
+		 if(xmlhttp.responseText){
+			    document.querySelector("#msg_id").value = "";
+			 }	 
+	 }
+			 
+			                       };
+url = "http://server9.000webhost.com/fishpond.site88.net/send_sms.php";
+xmlhttp.open("POST",url,true);
+xmlhttp.setRequestHeader("content-Type","application/x-www-form-urlencoded");
+xmlhttp.send("msg="+element+"&to="+element_+"&a="+1);
+ return false;
+	}
+function share_fun(){
+	
+	   var element = document.querySelector("#share");
+	    var element_text = document.querySelector("#share_text");       var element_b = document.querySelector("#share_button");
+	    element.innerHTML = "<input name='' type='file'><br>";
+	    element_text.innerHTML = "<textarea name='' cols='' rows=''></textarea>";
+		element_b.innerHTML = "<input name=\"\" type=\"submit\">"
+	   return false;
+	}
+
+function send_coment(){
+	var el_comm = document.querySelector("#comment").value;
+	alert(el_comm);
+	   var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		   
+		 document.querySelector("").innerHTML = xmlhttp.responseText;
+		 
+		 }
+                                        };
+					
+xmlhttp.open("GET","",true);
+xmlhttp.send();	
+    
+	}
+
+function  msg_sent(){
+	var str = document.querySelector("#message_sent").value;
+		 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		  if(xmlhttp.responseText){
+		 document.querySelector("#conf").innerHTML = xmlhttp.responseText;
+		    function disp_conf(){
+				    document.querySelector("#conf").innerHTML ="";
+				}
+				setTimeout(disp_conf,5000);
+		 }
+		 
+		 
+		 
+		 }
+                                        };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/send_sms_al.php",true);
+xmlhttp.send();
+
+
+	}
+	
+	function comment(a){
+     
+	  var element_1 = document.querySelector( "#comment_div" + a);
+	  element_1.innerHTML = ' <form method="post" action=""><div style="font-size:12px;">Comment</div><div data-role="fieldcontain"><textarea  name="textarea" id="textarea" ></textarea><input name="" type="submit" value="send" style="auto; float:right;"></div></form>';
+	  setTimeout(function(){
+		            element_1.innerHTML = "";
+		  },120000);
+	}
+	
+
+function validate_reg(){
+	
+	var element_1 = document.querySelector("#name").value;
+     var element_2 = document.querySelector("#user_name").value;
+	 var element_3 = document.querySelector("#mobile").value;
+	 var element_4 = document.querySelector("#email").value;
+	 var element_5 = document.querySelector("#pass").value;
+   
+	 var element_6 = document.querySelector("#repass").value;
+	  var element_8 = document.querySelector("#err");
+	   var element_9 = document.querySelector("#reg_no").value;
+	    var element_10 = document.querySelector("#birthDay").value;
+	  if(element_1 == "" || element_1 == null){element_8.innerHTML ="**name is required";}
+	 else if( /[0-9]/.test(element_1)){element_8.innerHTML ="name should not contain number";}
+	 else if( element_1.length < 4){element_8.innerHTML ="**name should contain at least 3 character";}
+	 
+	 
+	  else if(element_2 == "" || element_2 == null){element_8.innerHTML ="**user name is required";}
+	 
+	 else if( /^[0-9]/.test(element_2)){element_8.innerHTML ="**user_name should not start with number";}
+	 else if( element_2.length < 5){element_8.innerHTML ="user name should contain at least 4 character";}
+	 
+	 else if(element_4 == "" || element_4 == null){element_8.innerHTML ="**email is required";}
+	
+	 else if( !(/([A-Za-z0-9]*)+@+([A-Za-z]{2,5})+\.+([A-Za-z0-9])/.test(element_4))){element_8.innerHTML ="**put valid email";}
+	   else if(element_10 == "" || element_10 == null){element_8.innerHTML ="**birth day is required";}
+  else if(!(/^(([0-9]{2})*)+\/+(([0-9]{2})*)+\/+([0-9]{4})/.test(element_10))){
+	  element_8.innerHTML ="**put valid date format(eg. DD/MM/YYYY)";}	 
+	 else if(element_3 == "" || element_3 == null){element_8.innerHTML ="**mobile number is required";}
+	 else if( !(/^(0)+([0-9]{9})/.test(element_3))){element_8.innerHTML ="**put valid mobile( e.g 0712020408)";}
+	  else if(element_9 == "" || element_9 == null){element_8.innerHTML ="**registration number is required";}
+	  
+	   else if(isNaN(element_9)){element_8.innerHTML ="**registration must contain only  digits";}
+	   
+	   else if(element_9.length != 12){element_8.innerHTML ="**registration number must have 12 digits";}
+	   
+	  else if(element_5 == "" || element_5 == null){element_8.innerHTML ="password is required";}
+	 else if( !(/[0-9]/.test(element_5))){element_8.innerHTML ="**put strong password (strong password should contained both alphabet, digits)";}
+	  else if( !(/[A-Za-z]/.test(element_5))){element_8.innerHTML ="**put strong password (strong password should contained both alphabet, digits )";}
+	   else if(element_6 == "" || element_6 == null){element_8.innerHTML ="**retype you are password ";}
+	    else if(element_6 != element_5){element_8.innerHTML ="**password does not match";}
+	 else { 
+	     send_userinfo();
+	 }
+	 
+	 return false;
+}
+
+function share_fun(){
+	
+	   var element = document.querySelector("#share");
+	    var element_text = document.querySelector("#share_text");       var element_b = document.querySelector("#share_button");
+	    element.innerHTML = "<input name='' type='file'><br>";
+	    element_text.innerHTML = "<textarea name='' cols='' rows=''></textarea>";
+		element_b.innerHTML = "<input name=\"\" type=\"submit\">"
+	   return false;
+	}
+
+
+	function comment(a){
+     
+	  var element_1 = document.querySelector( "#comment_div" + a);
+	  element_1.innerHTML = ' <form method="post" action=""><div style="font-size:12px;">Comment</div><div data-role="fieldcontain"><textarea  name="textarea" id="textarea" ></textarea><input name="" type="submit" value="send" style="auto; float:right;"></div></form>';
+	  setTimeout(function(){
+		            element_1.innerHTML = "";
+		  },120000);
+	}
+
+function send_status(str,id){
+	  var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		 
+	 }
+			 
+			                       };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/send_status.php?msg_status="+str+"&msg_id="+id);
+xmlhttp.send();
+
+  return false;
+	}
+function MM_jumpMenuGo(objId,targ,restore){ //v9.0
+  var selObj = null;  with (document) { 
+  if (getElementById) selObj = getElementById(objId);
+  if (selObj) eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0; }
+}
+function grap_info(str,into){
+	
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		 document.querySelector("#info"+into).innerHTML = xmlhttp.responseText;
+	 }
+			 
+			                       };
+xmlhttp.open("GET","http://server9.000webhost.com/fishpond.site88.net/get_info.php?str="+str,true);
+xmlhttp.send();
+
+  return false;
+	}
+	
+   function send_userinfo(){ 
+  
+ var element = document.querySelector("#name").value;
+ var element_1 = document.querySelector("#user_name").value;
+  var element_2 = document.querySelector("#email").value;
+  var element_3 = document.querySelector("#depart").selectedIndex;
+    var element_3_1 = document.getElementsByName("dep")[element_3].value;
+	
+  var element_4 = document.querySelector("#gender").selectedIndex;
+     var element_4_1 = document.getElementsByName("gen")[element_4].value;
+  var element_6 = document.querySelector("#pass").value;
+  var element_7 = document.querySelector("#mobile").value;
+  var element_8 = document.querySelector("#birthDay").value;
+  var element_9= document.querySelector("#reg_no").value;
+  
+    
+	 var xmlhttp;
+	if(window.XMLHttpRequest){
+		xmlhttp = new XMLHttpRequest();}
+	else{
+	    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+ xmlhttp.onreadystatechange = function(){
+	 if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		  alert(xmlhttp.responseText);
+		   if(xmlhttp.responseText =="successfull registered"){
+		  window.location = "notes_body.html#image_upload";}
+	 }
+			 
+			                       };
+	url = "http://server9.000webhost.com/fishpond.site88.net/dit_reg.php";
+xmlhttp.open("POST",url,true);
+xmlhttp.setRequestHeader("content-Type","application/x-www-form-urlencoded");
+xmlhttp.send("name="+element+"&user_name="+element_1+"&email="+element_2+"&birthday="+element_8+"&mobile="+element_7+"&reg_no="+element_9+"&department="+element_3_1+"&gender="+element_4_1+"&password="+element_6);
+//							   						   
+ 	 return false;
+	 }	
+</script>
+<script type="text/javascript" src="upload.js"></script>
+</head>
+
+<body>
+<div data-role="page" data-theme="b" id="enter" style="height:auto;">
+  <div data-role="header" style="position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  </div>
+  <div data-role="content" style=" position:absolute; width:100%; top:6%; padding:0; background-color:transparent;">
+    <ul data-role="listview" data-inset="true" style="">
+      <li style="padding:2%; font-size:12px; border-radius:0">
+        <h3><a href="#body_admin" style="font-size:14px;" onClick="grap_info('A','0');">Admission</a></h3>
+        <p style=""><img src="img/dit.jpg" width="81" height="100" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam institute of technology</p>
+        <p class="ui-li-aside">http://www.dit.ac.tz</p>
+      </li>
+      <li style="padding:2%;">
+        <h3><a href="#department" style="font-size:14px;">Department</a></h3>
+        <p><img src="img/department.jpg" width="81" height="100" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam instute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+      <li style="padding:2%;">
+        <h3><a href="#body_DITSO" style="font-size:14px;"  onClick="grap_info('DI','1');">DITSO</a></h3>
+        <p><img src="img/Tulips.jpg" width="91" height="100" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam instute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+      <li style="padding:2%;">
+        <h3><a href="#body_lib" style="font-size:14px;"  onClick="grap_info('L','2');">DIT LIBRARY</a></h3>
+        <p><img src="img/lib.jpg" width="81" height="100" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam instute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+      <li style="padding:2%;">
+        <h3><a href="#body_clubs" style="font-size:14px;"  onClick="grap_info('C','3');">Dit Clubs</a></h3>
+        <p><img src="img/club.jpg" width="91" height="100" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam instute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+      <li style="padding:2%;">
+        <h3><a href="#body_publisher" style="font-size:14px;">Publish information</a></h3>
+        <p><img src="img/publish.jpg" width="71" height="90" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam instute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+      <li style="padding:2%;">
+        <h3><a href="#log_chat" style="font-size:14px;">chat</a></h3>
+        <p><img src="img/koala.jpg" width="81" height="100" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam instute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+      <li style="padding:2%; border-radius:0" >
+        <h3><a href="#body_about_dit" style="font-size:14px;"  onClick="grap_info('about_dit','4');">About DIT</a></h3>
+        <p><img src="img/dit_1.gif" width="71" height="90" alt="dit" longdesc="img/dit.jpg" style=" border:#000 thin none;">Dar es salaam institute of technology</p>
+        <p class="ui-li-aside">dit</p>
+      </li>
+    </ul>
+   
+     
+  </div>
+  
+</div>
+<div data-role="page" id="department" style="" data-backbtn="true" data-back-btn-text="Back" data-theme="b">
+  <div data-role="header" style="position:fixed; z-index:1;" >
+    <h1 style="text-align:left; ">DIT NOTES BODY</h1>
+  </div>
+  <div data-role="content" style="margin-top:10%; z-index:-1;">
+    <div data-role="collapsible-set">
+      <div data-role="collapsible" style="">
+        <h3 style="">Department</h3>
+        <p>        
+        <ul data-role="listview" data-inset="true">
+          <li><a href="#body_com"  onClick="grap_info('com','5');">Computer</a></li>
+          <li><a href="#body_tele"  onClick="grap_info('tel','6');">Telecommunication</a></li>
+          <li><a href="#body_bio"  onClick="grap_info('Bio','7');">Biomedical</a></li>
+          <li><a href="#body_elect"  onClick="grap_info('elect','8');">Electrical</a></li>
+          <li><a href="#body_civil"  onClick="grap_info('civ','9');">Civil</a></li>
+          <li><a href="#body_lab_tech"  onClick="grap_info('lab_tech','A');">Laboratory tech.</a></li>
+        </ul>
+        </p>
+      </div>
+      <div data-role="collapsible">
+        <h3>General information :</h3>
+        <p id="infogen"> 
+		</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div data-role="page" id="body_com" style="background-color:#063;" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:3;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Computer notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0%;" id="info5">
+       
+	 
+</div>
+</div>
+
+<div data-role="page" id="body_tele" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Telecommunication notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="info6">
+       
+	
+</div>
+</div>
+
+<div data-role="page" id="body_bio" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Biomedical notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="info7">
+     
+   </div>
+</div>
+
+<div data-role="page" id="body_elect" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+   <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Electrical notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="info8">
+     
+</div>
+</div>
+
+<div data-role="page" id="body_civil" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Civil notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="info9">
+     
+</div>
+</div>
+
+<div data-role="page" id="body_lab_tech" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+   <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Lab tech notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="infoA">
+</div>
+</div>
+
+<div data-role="page" id="body_admin" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back" data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+      <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Adminission notes body :</span></div>
+  </div>
+  
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="info0">  
+  </div>
+<!--
+    <div data-role="footer" data-theme="e" id="f_admin" style="">
+       <h1 style="text-align:left;">
+         <form method="post" action="">
+           <input type="text" name="textinput" id="textinput" value="" style="font-size:12px;"   />
+           <span style="margin-left:20%;"><input type="submit" name="textinput" id="textinput" value="send"   /></span></form>
+       </h1>
+    </div>
+    -->
+</div>
+
+<div data-role="page" id="body_DITSO" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+    <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">DITSO notes body :</span></div>
+  </div>
+  <div data-role="content" style="background-color:#fff; height:100%; margin-top:20%; padding:0" id="info1">
+    
+</div>
+</div>
+<div data-role="page" id="body_lib" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+    <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Library notes body :</span></div>
+  </div>
+  <div data-role="content" style="background-color:#fff; height:auto; margin-top:20%; padding:0" id="info2">
+     
+</div>
+</div>
+
+<div data-role="page" id="body_clubs" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+    <div style=" font-size:12px; font-style:italic; font-weight:normal; background-color:#0f0;color:#000; height:40px;"><br><span style=" margin-left:10%; font-style:italic; font-weight:normal;"></span><span style=" margin-left:2%;">Clubs notes body :</span></div>
+  </div>
+  <div data-role="content" style="background-color:#fff; height:auto; margin-top:20%; padding:0" id="info3">
+   
+</div>
+</div>
+
+<div data-role="page" id="body_about_dit" style="background-color:#063" data-backbtn="true" data-back-btn-text="Back"  data-theme="b">
+  <div data-role="header" style=" position:fixed; z-index:1;">
+    <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  </div>
+  <div data-role="content" style="background-color:#0F0; height:100%; margin-top:8%;">
+      <div style=" font-size:12px; font-style:italic; font-weight:bold">Inforamtion about dit :</div></div>
+  <div data-role="content" style="background-color:#063; height:100%; margin-top:0%; padding:0" id="info4">   
+</div>
+</div>
+
+<div data-role="page" id="body_publisher" style="height:100%;"  data-theme="b">
+   <div data-role="header">
+     <h1 style="text-align:left;">DIT NOTES BODY</h1>
+  </div>
+  <form action="" method="post" name="form_log_in" target="_self" data-ajax="true">
+ <div data-role="content" style="height:100%; padding:0; margin-top:10%;">
+     
+      <div class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique;">This page give you the simple and efficient way to inform people,<br /> log in to see by yourself
+      </div>
+    
+      <div class="ui-block-a" style="width:100%; font-size:13px" >
+        <div class="ui-grid-a">
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="ui-block-a"  style="width:100%; font-size:13px" ><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%;">user Name :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="user_name" id="username_2"  style="width:80%; border-radius:0%;"/></div>
+        </div></div>
+        
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div></div>
+        
+        
+          
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Password :</div>
+          <div class="ui-block-b" style="width:60%"><input type="password" name="password" id="password_2"  style="width:80%; border-radius:0%;"/>&nbsp;</div>
+        </div></div>
+     
+      <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+         
+     <input type="submit" value="Submit" data-icon="arrow-u" data-iconpos="left" name="submit" onClick="return  log_in_publish_validate();"/>
+    <input type="reset" value="clear" data-icon="forward" data-iconpos="right" /> 
+  </div></div>
+<div id="log_err" class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique; color:#f00">
+ 
+</div>
+</div>
+    </form>
+</div>
+
+</div>
+<div data-role="page" id="body_admin_publish" style="height:auto" data-backbtn="true" data-back-btn-text="Back" data-theme="b">
+<div data-role="header" style="position:fixed; z-index:1;">
+       <h1 style="text-align:left;">DIT NOTES BODY</h1>  
+       <div data-role="navbar" data-icon="grid" style="">
+     <ul>
+        <li><a href="" data-ajax="false">information</a></li>
+        <li><a href="" data-ajax="false">add media</a></li>
+       
+         <li><a href="" data-ajax="true" onClick="return log_out_validate();">log out</a></li>
+      </ul>
+  </div>
+        
+  </div>
+   
+
+  <div data-role="content" style="height:auto; z-index:-1; margin-top:18%; padding:0">
+ <form action="http://server9.000webhost.com/fishpond.site88.net/send_sms.php" method="POST" name="form_2" target="_self" data-ajax="false">
+   <div class="ui-grid-a">
+    <div class="ui-block-a" style ="width:100%;">&nbsp;</div>
+      <div class="ui-block-a" style=" width:100%; text-indent:5%;font-size:12px; font-style:italic; color:#00008B;">SEND INFORMATION TO MEMBERS :
+      </div>
+      <div class="ui-block-a" style ="width:100%;">&nbsp;</div>
+      <div class="ui-block-a" style=" width:100%; text-indent:10%;font-size:12px;">from :
+      </div>
+      
+     <div class="ui-block-a" style=" width:100%; text-indent:22%;">
+          <input type="text" value = "";  id="from" name="from"/>
+     </div>
+       <div class="ui-block-a" style ="width:100%;">&nbsp;</div>
+      <div class="ui-block-a" style=" width:100%; text-indent:10%;font-size:12px;">Notes body type :
+      </div>
+      
+     <div class="ui-block-a" style=" width:100%; text-indent:22%;">
+           <div data-role="fieldcontain" id="admin_policy">
+      <select name="select_course" id="select_policy" onChange=" change_new();" name="notes_body_type">
+        <option value="A">Admission</option>
+       <option value="com">Computer</option><option value="Tel">Telecommunication</option><option value="Civ">Civil</option><option value="Elect">Electrical</option><option value="Min">Mining</option><option value="Lab_tech">Lab tech</option><option value="Bio">Biomedical</option>
+        <option value="DI">DITSO</option>
+         <option value="L">DIT LIBRARY</option>
+          <option value="C">DIT CLUBS</option>
+            <option value="GEN">General information</option>
+      </select>
+    </div>   
+     </div>
+      
+      <div class="ui-block-a" style=" width:100%; text-indent:30%;font-size:12px;" id="add_user"></div>
+      <div class="ui-block-a" style=" width:100%; text-indent:10%;font-size:12px;">message :
+      </div>
+      <div class="ui-block-a" style ="width:100%;">&nbsp;</div>
+      <div class="ui-block-a" style="width:100%; text-indent:22%">
+          <textarea cols="40" rows="8" name="msg" id="msg_input" style="font-size:12px; border-radius:0%;"></textarea>
+      
+      </div>
+      
+      
+      
+   <div class="ui-block-a" style="width:100%; text-align:right;">
+   
+     <div data-role="controlgroup" data-type="horizontal">
+            <input type="submit" value="send info" name="submit" />
+            <input type="reset" value="clear" />
+        </div>
+  </div>
+  
+  
+</div>
+  <div  id="reply" class="ui-block-a" style="width:100%; font-size:13px; text-align:center;"></div>
+   <hr />
+   
+      <div class="ui-block-a" style="width:auto">
+    <span style="" ></span>
+</div> 
+ </div>
+ </form>
+</div>
+<!-- close admin -->
+<!-- open log in chat -->
+<div data-role="page" id="log_chat"  style="height:100%" data-theme="b">
+  <div data-role="header">
+    <h1>DIT NOTES BODY</h1>
+    <div data-role="navbar" data-icon="grid" style=" background-color:#000;">
+     <ul style=" background-color:#000;">
+        <li style="background-color:#000">
+        <a href="notes_body.html#reg" data-ajax='false'>registration</a></li>
+        <li><a href="notes_body.html#enter" data-ajax="false">back</a></li>
+      </ul>
+  </div>
+  </div>
+  <div data-role="content">
+  <form action="" method="post" data-ajax="true" >
+       <div class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique;">This page give you the simple and efficient way to chats,<br> log in to see by yourself
+      </div>
+    
+      <div class="ui-block-a" style="width:100%; font-size:13px" >
+        <div class="ui-grid-a">
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="ui-block-a"  style="width:100%; font-size:13px" ><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%;">user Name :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="user_name" id="username_1"  style="width:80%; border-radius:0%;"/></div>
+        </div></div>
+        
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div></div>
+        
+        
+          
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Password :</div>
+          <div class="ui-block-b" style="width:60%"><input type="password" name="password" id="password_1"  style="width:80%; border-radius:0%;"/>&nbsp;</div>
+        </div></div>
+     
+      <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+         
+     <input type="submit" value="Submit" data-icon="arrow-u" data-iconpos="left" name="submit_log" onClick="return log_in_validate();"/>
+    <input type="reset" value="clear" data-icon="forward" data-iconpos="right" /> 
+  </div></div>
+<div id="log_err" class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique; color:#f00">
+ 
+</div>
+  </div>
+   </form>
+</div>
+</div>
+
+
+<!-- close log in chat -->
+
+<!-- registration !-->
+<div data-role="page" id="reg" data-back-btn-text="Back" data-backbtn="true"  data-theme="b" >
+  <div data-role="header" style=" position:fixed; z-index:1" >
+    <h1 style="font-stretch:condensed; font-style:italic; text-align:left; margin-left:30%; width:100%;">DIT NOTES BODY</h1>
+          <div data-role="navbar" data-icon="grid" style=" background-color:#000;" data-theme="a">
+     <ul>
+        <li style="background-color:#000">
+        <a href="notes_body.html#enter" data-ajax='false'>home</a></li>
+        <li><a href="notes_body.html#log_chat" data-ajax="false">back</a></li>
+      </ul>
+  </div>
+     </div>
+
+  <div data-role="content">
+  <form  method="post" name="form_reg" data-ajax="false" enctype="multipart/form-data">
+       <div class="ui-grid-a" style="width:100%; margin-top:20%;">
+        <div class="ui-block-a" style="text-align:center; width:100%; font-size:13px;">seine give you the simple and efficient way to inform people, register to see by yourself</div>
+      </div>
+      <div class="ui-grid-a">
+         <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+        <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;" id="err"></div> 
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Name :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="name" id="name"  style="width:80%; border-radius:0%;"/></div>
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%;">User name :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="user_name" id="user_name"  style="width:80%; border-radius:0%;"/></div>
+         <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Email :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="email" id="email"  style="width:80%; border-radius:0%;"/></div> 
+           <div class="ui-block-a" style="width:50%; text-indent:10%; margin-top:2%; ">Birth Day(eg 27/07/2014) :</div>
+          <div class="ui-block-b" style="width:50%">
+            <div data-role="fieldcontain">
+              <input type="text" name="birthday" id="birthDay" value="" style="width:50%; border-radius:0%;"/>
+            </div>
+          </div>
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">mobile no. :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="mobile" id="mobile"  style="width:80%; border-radius:0%;"/></div>
+          
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Registration no. :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="reg_no" id="reg_no"  style="width:80%; border-radius:0%;"/></div>
+           <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; font-size:13px; ">Department :</div>
+         <div class="ui-block-b" style="width:60%"> <select name="department" id="depart" style="font-size:12px; text-align:left; border-radius:0%;">
+            <option value="OD 10 COMPUTER" style="font-size:12px;" name ='dep'>OD 10 COMPUTER</option>
+            <option value="OD 11 COMPUTER" style="font-size:12px;"  name ='dep'>OD 11 COMPUTER</option>
+            <option value="OD 12 COMPUTER" style="font-size:12px;"  name ='dep'>OD 12 COMPUTER</option>
+             <option value="0D 13 COMPUTER" style="font-size:12px;"  name ='dep'>OD 13 COMPUTER</option>
+              <option value="BENG 11 COMPUTER" style="font-size:12px;" name ='dep'>BENG 11 COMPUTER</option>
+               <option value="BENG 12 COMPUTER" style="font-size:12px;"  name ='dep'>BENG 12 COMPUTER</option>
+                <option value="BENG 13 COMPUTER" style="font-size:12px;" name ='dep'>BENG 13 COMPUTER</option>
+                 <option value="BENG 14 COMPUTER" style="font-size:12px;" name ='dep'>BENG 14 COMPUTER</option>
+          </select>
+      </div>
+   <div class="ui-block-a" style="width:40%; text-indent:11%; margin-top:2%; "> Gender :</div>
+          <div class="ui-block-b" style="width:60%; z-index:-1">
+            <div data-role="fieldcontain" style="z-index:0;">
+              <select name="gender" id="gender" style="font-size:12px; text-align:left; border-radius:0%;">
+            <option value="Male" style="font-size:12px;" name="gen">Male</option>
+            <option value="Female" style="font-size:12px;" name="gen">Female</option>
+            <option value="Other" style="font-size:12px;" name="gen">Other</option>
+            </select>
+            </div>
+          </div>    
+       
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Password :</div>
+          <div class="ui-block-b" style="width:60%"><input type="password" name="password" id="pass"  style="width:80%; border-radius:0%;" /></div>
+          
+       <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Repassword :</div>
+          <div class="ui-block-b" style="width:60%"><input type="password" name="repassword" id="repass"  style="width:80%; border-radius:0%;" /></div>       
+               
+        </div>
+
+     <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+          <input type="submit" value="Submit" name="submit" id="validate" onClick=" return send_userinfo();"/>
+          <input type="reset" value="clear" />
+        </div>
+      </div>
+  </form>
+  </div>
+ 
+</div>
+<!-- close reg -->
+
+
+<!-- media -->
+
+<div data-role="page" id="media" data-add-back-btn="true" style="height:auto" data-theme="b">
+  
+<div data-role="header" style="position:fixed; z-index:1">
+    <h1  style="font-stretch:condensed; font-style:italic; margin-right:5%; z-index:1; width:100%;" ><span style="font-stretch:condensed; font-style:italic; float:left; width:20%;">DIT NOTES BODY</span><span style="font-stretch:condensed; font-style:italic; float:right; width:80%; font-size:12px; text-indent:2%;" id="user_media"></span></h1>
+    <div data-role="navbar" data-icon="grid" style="">
+      <ul>
+        <li><a href="notes_body.html#chat" data-ajax="false" data-icon="info" onClick="chatting();">chat</a></li>
+        <li><a href="" data-icon="gear" data-ajax="false">share</a></li>
+         <li><a href="" data-ajax="true" data-icon="back"  onClick="return log_out_validate();">log out</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div data-role="content" style="height:auto; z-index:-1; margin-top:18%; background-color:#999999;" id="media_c">
+  <div data-role="page" id="page2">
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+  ">Content </div>
+</div>
+</div>
+<!-- close media -->
+
+<!-- open share -->
+<div data-role="page" id="share"  style="height:100%" data-theme="b" data-backbtn="true" data-back-btn-text="Back">
+  <div data-role="header">
+    <h1 style="margin-left:10%;">DIT NOTES BODY</h1>
+    <div data-role="navbar" data-icon="grid" style="">
+      <ul>
+        <li><a href="notes_body.html#chat" data-ajax="false" data-icon="info" onClick="chatting();">chat</a></li>
+        <li><a href="notes_body.html#media" data-icon="star" data-ajax="false">media</a></li>
+        <li><a href="" data-ajax="true" data-icon="back"  onClick="return log_out_validate();">log out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+  <form action="" method="post" data-ajax="false" >
+       <div class="ui-block-a" style="text-align:left; width:100%; font-size:13px; font-style:oblique;">ADD MEDIA 
+      </div>
+    
+      <div class="ui-block-a" style="width:100%; font-size:13px" >
+        <div class="ui-grid-a">
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          
+        </div>
+      </div>
+      
+      <div class="ui-block-a"  style="width:100%; font-size:13px" ><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%;">Name :</div>
+          <div class="ui-block-b" style="width:60%"><input name="media" type="file" id="media_share"></div>
+        </div></div>
+        
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div></div>
+        
+        
+          
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Media Description :</div>
+          <div class="ui-block-b" style="width:60%"><textarea name="about_media" cols="30" rows="30"></textarea></div>
+        </div></div>
+     
+      <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+         
+     <input type="submit" value="share" data-icon="plus" data-iconpos="left" name="submit_1"/>
+    <input type="reset" value="cancel" data-icon="minus" data-iconpos="right" /> 
+  </div></div>
+<div id="log_err" class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique; color:#f00">
+ 
+</div>
+   </form>
+   </div>
+</div>
+
+
+
+<!-- close share -->
+
+
+<!-- chat -->
+ <div data-role="page" id="chat" data-theme="b">
+<div data-role="header" style="position:fixed; z-index:1">
+    <h1  style="font-stretch:condensed; font-style:italic; margin-right:5%; z-index:1; width:100%;" ><span style="font-stretch:condensed; font-style:italic; float:left; width:20%;">DIT NOTES BODY</span><span style="font-stretch:condensed; font-style:italic; float:right; width:80%; font-size:12px; text-indent:2%;" id="user"></span></h1>
+  </div>
+  
+ <div data-role="content" style=" position:absolute; width:100%; background-color:#0FF; padding:0%; margin:0%; top:9%;" id="chat_c">
+  </div>
+<div data-role="footer" data-theme="a" style=" position:fixed;top:95%; margin-top:0%;">
+      
+        <div data-role="navbar" data-grid="d">
+          <ul>
+            <li><a href="#">friends</a></li>
+            <li><a href="notes_body.html#add" data-ajax="false">add</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="notes_body.html#media" data-ajax="false">media</a></li>
+            <li><a href="" data-ajax="true"  onClick="return log_out_validate();">log out</a></li>
+          </ul>
+        </div>
+</div>
+
+</div>
+  
+<div data-role="page" id="chat_room"  data-theme="b">
+  <div data-role="header" style="position:fixed; z-index:1;">
+   <h1  style="font-stretch:condensed; font-style:italic; margin-right:5%; z-index:1; width:100%;" ><span style="font-stretch:condensed; font-style:italic; float:left; width:20%;">DIT NOTES BODY</span><span style="font-stretch:condensed; font-style:italic; float:right; width:80%; font-size:12px; text-indent:2%;" id="user_chat_room"></span></h1>
+    <div data-role="navbar" data-icon="grid" style="background-color:#000;">
+      <ul>
+        <li><a href="notes_body.html#chat" data-ajax="false" data-icon="info" onClick=" disable_this();">chat</a></li>
+        <li><a href="notes_body.html#media" data-icon="star" data-ajax="false">media</a></li>
+        <li><a href="" data-ajax="true" data-icon="back"  onClick="return log_out_validate();">log out</a></li>
+      </ul>
+    </div>
+  </div>
+   <div data-role="content" style="  background-image:url(img/Tulips.jpg); background-attachment:fixed; background-color:#0FF; margin-top:2%;">
+          <div style=" margin-top:5%; margin-bottom:10%;"  id="message" ></div>
+     </div>
+  <div data-role="footer" style=" position:fixed; top:90%; background-color:#FF0; z-index:2; width:100%;" data-theme="a">
+  <form action="" method="get">
+       <div data-role="navbar" data-icon="grid" style="background-color:#000;">
+      <ul>
+      <li style="background-color:#000; width:20%;"><span style= " width:20%; text-align:center;background-color:#000; margin-left:10%;">message :</span></li>
+      <li style="width:50%;"><input type="text" name="msg" id="msg_id" style="background-color:#fff; color:#000; font-size:12px; width:200px;"/></li>
+<li style="width:20%; background-color:#000; margin-left:5%;"><input type="submit" name="submit" id="submit_id" value="send" onClick="return send_sms();" /></li>
+      </ul>
+    </div>
+    <span style="visibility:hidden"><input type="text" name="to" id="to_id" onClick="return send_sms();" disabled /></span>
+   </form>
+  </div>
+</div>
+
+
+<!-- open add -->
+<div data-role="page" id="add"  style="height:100%" data-theme="b">
+  <div data-role="header">
+    <h1>DIT NOTES BODY</h1>
+    <div data-role="navbar" data-icon="grid" style="">
+      <ul>
+        <li><a href="notes_body.html#chat" data-ajax="false" data-icon="info" onClick="chatting();">chat</a></li>
+        <li><a href="notes_body.html#media" data-icon="star" data-ajax="false">media</a></li>
+        <li><a href="" data-ajax="true" data-icon="back"  onClick="return log_out_validate();">log out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+  <form action="" method="post" data-ajax="true" >
+       <div class="ui-block-a" style="text-align:left; width:100%; font-size:13px; font-style:oblique;">ADD FRIEND TO CONTACT
+      </div>
+    
+      <div class="ui-block-a" style="width:100%; font-size:13px" >
+        <div class="ui-grid-a">
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          
+        </div>
+      </div>
+      
+      <div class="ui-block-a"  style="width:100%; font-size:13px" ><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%;">User name :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="user_name" id="username_3"  style="width:80%; border-radius:0%;"/></div>
+        </div></div>
+        
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div></div>
+        
+        
+          
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Mobile number :</div>
+          <div class="ui-block-b" style="width:60%"><input type="text" name="mobile" id="mobile_3"  style="width:80%; border-radius:0%;"/>&nbsp;</div>
+        </div></div>
+     
+      <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+         
+     <input type="submit" value="add" data-icon="plus" data-iconpos="left" name="submit_1" onClick="return add()"/>
+    <input type="reset" value="cancel" data-icon="minus" data-iconpos="right" /> 
+  </div></div>
+<div id="log_err" class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique; color:#f00">
+ 
+</div>
+  </div>
+   </form>
+</div>
+
+
+
+<!-- close add -->
+
+<!-- open upload image -->
+<div data-role="page" id="image_upload"  style="height:100%" data-theme="b">
+  <div data-role="header">
+    <h1>DIT NOTES BODY</h1>
+  </div>
+  <div data-role="content">
+  <form action="" method="post" data-ajax="false" >
+       <div class="ui-block-a" style="text-align:center; width:100%; font-size:13px; font-style:oblique;">Please before continue you have to upload image<br> for your profile
+      </div>
+    
+      <div class="ui-block-a" style="width:100%; font-size:13px" >
+        <div class="ui-grid-a">
+        <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div>
+      </div>
+        
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">&nbsp;</div>
+          <div class="ui-block-b" style="width:60%">&nbsp;</div>
+        </div></div>
+        
+        
+          
+      <div class="ui-block-a" style="width:100%; font-size:13px"><div class="ui-grid-a">
+          <div class="ui-block-a" style="width:40%; text-indent:10%; margin-top:2%; ">Image :</div>
+          <div class="ui-block-b" style="width:60%"><input name="img[]"  type="file" id="upload_img"></div>
+            <div class="ui-block-b" style="width:60%">&nbsp;</div>
+              <div class="ui-block-b" style="width:100%;text-align:center;" id="progress">&nbsp;</div>
+        </div></div>
+     
+      <div class="ui-block-a" style="width:100%; font-size:13px; text-align:center;">
+        <div data-role="controlgroup" data-type="horizontal">
+         
+     <input type="submit" value="Upload" name="images" id="upload" onClick=" return handler();" />
+    <input type="reset" value="clear"  /> 
+  </div></div>
+  </div>
+   </form>
+</div>
+</div>
+
+
+<!-- close upload image -->
+
+</body>
+</html>
